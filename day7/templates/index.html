@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Project name -- SNM</title>
+{% endblock %}
+
+{% block content %}
+   <!-- <h1 style="color: red; text-align: center;">Welcome to Index page</h1>
+    <h2 style="color: chocolate;">This is manoj</h2>
+    <h3>{{d}}</h3> -->
+    <h1 style="color: rgb(92, 117, 207);">Welcome to index page</h1>
+    {% if d>20 %}
+        <p>{{d}} is greater than 20</p>
+    {% elif d<20 %}
+        <p>{{d}} is less than 20</p>
+    {% else %}
+        <p>{{d}} is equal to 20</p>
+    {% endif %}
+    {% if p %}
+        {% for s in p %}
+            <p>{{s.id}} - {{s.name}}</p>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}
